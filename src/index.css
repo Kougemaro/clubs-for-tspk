@@ -71,3 +71,22 @@ code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@media screen and (max-width: 1367px) {
+    .container{
+        max-width: 1092px;
+        margin: 0 auto;
+    }
+
+}
+@media screen and (min-width: 240px) and (max-width: 768px) {
+    .loader{
+        margin: 0;
+    }
+    .grid-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .all-clubs{
+        padding: 0;
+    }
+}

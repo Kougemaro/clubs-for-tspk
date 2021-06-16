@@ -5,11 +5,10 @@ const ClubDescription = (props) => {
     const blockFirst = props.blockFirst;
     const blockSecond = props.blockSecond;
     const title = props.title;
-    console.log(blockFirst,blockSecond, props)
     //Надо решить где тру и где фолз вывода информации
     // и пофиксить картинки а вообще похуй иди лучше чего нибудь сладкого поешь
     function renderDescription(title,blockFirst,blockSecond){
-        if(title == "Когда работает клуб?"){
+        if(title === "Когда работает клуб?"){
              return (<div>
                 <div className={s.time}>-{blockFirst.timeFirst}</div>
                 <div className={s.time}>-{blockFirst.timeSecond}</div>

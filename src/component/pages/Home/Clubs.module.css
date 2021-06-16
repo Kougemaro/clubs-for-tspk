@@ -50,3 +50,26 @@
 .activeLink:hover {
     color: var(--text-blue)
 }
+@media screen and (min-width: 240px) and (max-width: 768px) {
+    .block{
+        width: 100%;
+        border-radius: 0;
+        padding: 60px 10px;
+
+    }
+    .title {
+        font-size: 30px;
+        margin-top: 0;
+    }
+    .block:hover{
+        transform: translateY(0px);
+    }
+    .arrow{
+        display: none;
+    }
+    .activeLink{
+        font-size: 32px;
+        max-width: 100%;
+    }
+
+}

@@ -20,3 +20,14 @@
     height: 2px;
     background-color: var(--text-gray);
 }
+@media screen and (min-width: 240px) and (max-width: 768px) {
+    .title h1{
+        width: 100%;
+        text-align: center;
+        font-size: 2.2em !important;
+    }
+    .paragraph{
+        min-width: 100%;
+    }
+
+}

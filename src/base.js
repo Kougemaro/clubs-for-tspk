@@ -1,4 +1,7 @@
 import firebase from 'firebase';
+import 'firebase/database';
+import 'firebase/app';
+
 
 export const base = firebase.initializeApp({
     apiKey: "AIzaSyDd7dcWQFxwEG91D7cWPzc2iMc49mmkdlM",

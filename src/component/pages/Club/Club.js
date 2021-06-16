@@ -1,14 +1,22 @@
-import React, {Component} from 'react';
+import React from 'react';
 import s from './Club.module.css';
-import { clubsName} from  '../../../Data'
 import { useParams } from "react-router-dom"
 import ClubBlock from "../Home/ClubBlock";
 import HomeLink from "./HomeLink";
+import firebase from "../../../base";
 
 const Club = () => {
     const {urlTitle} = useParams();
-    let data = clubsName.filter(block => block.title == urlTitle)
-    data = data[0]
+    let array = []
+    let listClubs = firebase.database().ref('clubs');
+    listClubs.on('value', (snapshot => {
+        snapshot.forEach(function (childSnapshot) {
+            let childData = childSnapshot.val();
+            array.push(childData)
+        });
+    }));
+    let dataFilter = array.filter(block => block.title === urlTitle);
+    let data = dataFilter[0];
     const blockFirst =  data.blockFirst;
     const blockSecond = data.blockSecond;
     return (
